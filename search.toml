@@ -1,0 +1,13 @@
+[input]
+html_selector = "main"
+base_directory = "output"
+
+[[input.files]]
+path = "posts/What-you-must-know-about-Big-data-storage.html"
+url = "/posts/What-you-must-know-about-Big-data-storage"
+title = "What you must know about Big data storage?"
+
+[[input.files]]
+path = "posts/What-you-must-know-about-computer-memory.html"
+url = "/posts/What-you-must-know-about-computer-memory"
+title = "What you must know about Computer Memory?"

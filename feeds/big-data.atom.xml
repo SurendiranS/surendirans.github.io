@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Born2Compute - Big data</title><link href="https://surendirans.github.io/" rel="alternate"/><link href="https://surendirans.github.io/feeds/big-data.atom.xml" rel="self"/><id>https://surendirans.github.io/</id><updated>2020-09-19T00:00:00+05:30</updated><subtitle>👨‍💻 Personal Tech Journal 💭</subtitle><entry><title>What you must know about Big data storage?</title><link href="https://surendirans.github.io/posts/What-you-must-know-about-Big-data-storage" rel="alternate"/><published>2020-09-19T00:00:00+05:30</published><updated>2020-09-19T00:00:00+05:30</updated><author><name>Surendiran Subramanian</name></author><id>tag:surendirans.github.io,2020-09-19:/posts/What-you-must-know-about-Big-data-storage</id><summary type="html">&lt;p&gt;Learn how Facebook / Instagram stores and retrieve 500+ TB of daily data quickly.&lt;/p&gt;</summary><content type="html">
+&lt;p&gt;We might have surely come across the below two problems probably more than once in your life time.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Storage Full.&lt;/li&gt;
+&lt;li&gt;Slow File Transfer.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p style="display:flex; gap:10px;"&gt;
+&lt;img alt="windows-slow-file-transfer" src="https://surendirans.github.io/posts/windows-slow-file-transfer.png" style="width:45%;"/&gt;
+&lt;img alt="iphone-storage-full" src="https://surendirans.github.io/posts/iphone-storage-full.jpeg" style="width:45%;"/&gt;
+&lt;/p&gt;
+&lt;p&gt;In today's social media world, we always love to constantly post statuses, videos in Facebook, Instagram, etc.  Have you ever wondered &lt;strong&gt;&lt;em&gt;how big tech gaints like Facebook, Instagram manage the above kinds of problems?&lt;/em&gt;&lt;/strong&gt;&lt;/p&gt;
+&lt;h3 id="the-scale-of-data-in-social-media"&gt;The Scale of Data in Social Media&lt;/h3&gt;
+&lt;p&gt;Reports says that, during the 2&lt;sup&gt;nd&lt;/sup&gt; quarter of 2020, Facebook reported almost 1.79 billion Daily Active Users(DAUs).  Overall, DAU's accounted for 66 percent of monthly active users.  This rate is growing more and more day by day.  Every day, we upload massive amount of data to Facebook’s data centre.  Every 60 seconds, more than 136,000 photos are uploaded, 510,000 comments are posted, and 293,000 status updates are posted.  This could account &lt;strong&gt;500+ TBs/day&lt;/strong&gt;.  That's a lot of data.  In-order to give a severity of the problem lets do a quick experiment.  &lt;/p&gt;
+&lt;h3 id="limitations-of-traditional-storage"&gt;Limitations of Traditional Storage&lt;/h3&gt;
+&lt;p&gt;Lets go and search for the highest available hard disk in the market.&lt;/p&gt;
+&lt;p&gt;&lt;img alt="maximum-available-storage-in-market" src="https://surendirans.github.io/posts/maximum-available-storage-in-market.png" style="width:80%; display: block;margin: auto;"/&gt;&lt;/p&gt;
+&lt;p&gt;We can see that the size of hard disk does not exceed more than 10 TBs.  But that is too low storage for these Tech Giants.  We may think that these very big companies having lots of investors, so they might be doing custom manufacturing of hard disk more than 100+ Peta Bytes(PB).  If so then lets go to windows machine containing 1 TB storage, pretty i5 processor running at 2.4GHz and do two experiment.&lt;/p&gt;
+&lt;ol&gt;
+&lt;li&gt;Search for a file.&lt;/li&gt;
+&lt;li&gt;Copy file a file of size 1GB from C to D drive.&lt;/li&gt;
+&lt;/ol&gt;
+&lt;p&gt;We can notice that it would take nearly 5-6 min approx.  Now just imagine searching a post stored in 100+ Peta Bytes of data and copying  500+ Tera Bytes of daily data into Facebook's server.  We might be requiring 7+ days approx to upload and view your posts.  This is surely not a good thing to hear.  Then how these companies over come these kind of problems??&lt;/p&gt;
+&lt;div class="admonition important"&gt;
+&lt;p class="admonition-title"&gt;Important&lt;/p&gt;
+&lt;p&gt;The above experiment's result may slightly vary depending upon the background processes running in your machine.&lt;/p&gt;
+&lt;/div&gt;
+&lt;h3 id="distributed-storage-explained"&gt;Distributed Storage Explained&lt;/h3&gt;
+&lt;p&gt;Now lets do the above experiment, but dividing the file into 2 halves - 512 MB (1 GB = 1024 MB) each and coping into two systems separately and simultaneously.  We can clearly note the access time has been reduced to half than before.  What if we divide the file into 4 part and store it in 4 different computers?  What if we divide file into 10 parts, use 10 different computer (generally called as Slave Nodes) and keep one computer(generally called as Master Node) to manage these 10 computers.&lt;/p&gt;
+&lt;p&gt;Yes that's the idea.  This type of storage is called as &lt;strong&gt;Distributed Storage Systems&lt;/strong&gt;.  This becomes the basics for handling big data storage problems.  Real world servers like Facebook's would typically have 15000+ slave-nodes and servers like yahoo would have 4000+ slave-nodes in a cluster (slaves-nodes and master-node combined together called single cluster).  &lt;/p&gt;
+&lt;p&gt;Tools like &lt;em&gt;&lt;a href="https://hadoop.apache.org/"&gt;Apache Hadoop&lt;/a&gt;&lt;/em&gt; help these companies manage such massive amounts of data by distributing storage and computation across all those nodes in the cluster.&lt;/p&gt;</content><category term="Big data"/><category term="Hadoop"/><category term="Big data"/><category term="Storage"/></entry></feed>

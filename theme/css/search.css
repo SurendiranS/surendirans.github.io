@@ -1,0 +1,20 @@
+#pelican-search-result {
+  & div.pelican-search-result-item {
+    margin: 0 0 20px 0;
+  }
+
+  & p.pelican-search-result-fail,
+  & p.pelican-search-result-item-body {
+    font-family: var(--serifFontFamily);
+    font-size: rfs(1rem);
+    line-height: 1.6;
+    text-transform: none;
+    margin: 10px 0 0 0;
+  }
+
+  & p.pelican-search-result-fail {
+    color: maroon;
+    text-align: center;
+    font-size: rfs(1.125rem);
+  }
+}
